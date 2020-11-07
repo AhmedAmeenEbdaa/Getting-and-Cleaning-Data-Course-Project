@@ -50,7 +50,7 @@ renameActivityValues <- function(dataset){
 }
 createTidyDataSet <- function(dataset){
 	newTidyDataSet <- gather(dataset,feature,value,-c('subject','activity'))
-	write.table(newTidyDataSet,'tidydataset.csv',sep = ",", dec=".",col.names = TRUE)
+	write.table(newTidyDataSet,'tidydataset.txt',sep = " ", dec=".",col.names = TRUE,row.names = FALSE) 
 	newTidyDataSet
 }
 createActivityMeanForFeatures <- function(tidyData){
